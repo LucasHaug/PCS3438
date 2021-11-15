@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
-"""Train a Gaussian Naive Bayes classifier using the data from class01.csv.
+"""Gaussian Naive Bayes classifier
+
+Train a Gaussian Naive Bayes classifier using the holdout
+method for cross validation. The data used to train and
+test the classifier is the data from the class01.csv file.
+
 File
 -------
 question1.py

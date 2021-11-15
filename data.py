@@ -6,6 +6,9 @@ import pandas as pd
 def get_data(file_name):
     """
     Reads the data from the file and returns the features and the target.
+
+    Args:
+        file_name (str): The name of the file to be read.
     """
 
     data = pd.read_csv(file_name)
@@ -17,7 +20,12 @@ def get_data(file_name):
 
 def get_holdout_data(file_name, holdout_size):
     """
-    Reads the data from the file and returns the training and test sets.
+    Reads the data from the file and returns the training
+    and test sets using the holdout method.
+
+    Args:
+        file_name (str): The name of the file to be read.
+        holdout_size (int): The size of the holdout set.
     """
 
     features, target = get_data(file_name)
