@@ -17,7 +17,7 @@ Author
 """
 
 from data import get_data
-from sklearn.model_selection import cross_validate
+from sklearn.model_selection import cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 
@@ -27,9 +27,9 @@ def main():
 
     clf = KNeighborsClassifier(n_neighbors=10, metric="euclidean", n_jobs=4)
 
-    scores = cross_validate(clf, x_data, y_data, cv=5, n_jobs=4)
+    scores = cross_val_score(clf, x_data, y_data, cv=5, n_jobs=4)
 
-    print(f"Mean accuracy: {np.mean(scores['test_score']) * 100 : .2f}%")
+    print(f"Mean accuracy: {np.mean(scores) * 100 : .2f}%")
 
 
 if __name__ == "__main__":
