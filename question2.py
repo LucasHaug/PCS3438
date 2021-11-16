@@ -26,7 +26,6 @@ def main():
     x_data, y_data = get_data("data/class02.csv")
 
     clf = KNeighborsClassifier(n_neighbors=10, metric="euclidean", n_jobs=4)
-    clf.fit(x_data, y_data)
 
     scores = cross_validate(clf, x_data, y_data, cv=5, n_jobs=4)
 
