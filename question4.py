@@ -48,8 +48,8 @@ def main():
         mae_test.append(mean_absolute_error(y_test, test_predict))
 
     print("Mean Absolute Errors:")
-    print(f"Mean Train MAE: {np.mean(mae_train)}")
-    print(f"Mean Test MAE:  {np.mean(mae_test)}")
+    print(f"Mean Train MAE: {np.mean(mae_train) : .2f}")
+    print(f"Mean Test MAE:  {np.mean(mae_test) : .2f}")
 
 
 if __name__ == "__main__":

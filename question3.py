@@ -48,8 +48,8 @@ def main():
         rmse_test.append(mean_squared_error(y_test, test_predict, squared=False))
 
     print("Root Mean Squared Errors:")
-    print(f"Mean Train RMSE: {np.mean(rmse_train)}")
-    print(f"Mean Test RMSE:  {np.mean(rmse_test)}")
+    print(f"Mean Train RMSE: {np.mean(rmse_train) : .2f}")
+    print(f"Mean Test RMSE:  {np.mean(rmse_test) : .2f}")
 
 
 if __name__ == "__main__":
